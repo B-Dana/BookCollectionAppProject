@@ -1,0 +1,49 @@
+{% extends 'ScienceBooks/books_base.html' %}
+{% load static %}
+{% block templatecontent %}
+
+<section>
+
+    <div class="flex-container">
+        <form method="get" style="text-align:center;">
+               {% csrf_token %}
+             {{ form1.as_p }}
+            <br/>
+            <br/>
+            <input type="text" name="search_terms" placeholder="Title or Author" class="book-search">
+
+            <button class="primary-bright-button" type="submit"> Search Books </button>
+        </form>
+    </div><br/><br/>
+
+        {% if book %}
+            {% for item in book.items %}
+
+    <ul id="list">
+        <li><h4><strong>{{ item.volumeInfo.title }}</strong></h4>
+            <strong>By: {{ item.volumeInfo.authors }}</strong><br/>
+            <strong>Publication Date: {{ item.volumeInfo.publishedDate }}</strong><br/><br/>
+            <img src='{{ item.volumeInfo.imageLinks.thumbnail }}'> <br/><br/>
+            <button class="primary-bright-button second" type="submit"><a href="{{ item.volumeInfo.infoLink }}" id="link" target="_blank"> Learn more </a></button>
+            <br/><br/>
+        </li>
+    </ul>
+
+
+    <form method="post" action="{% url 'addApi' %}" style="text-align:center;">
+            {% csrf_token %}
+        {{ form2.as_p }}
+
+        <button class="primary-bright-button third" name="btn2" type="submit" value="{{ item.id }}" >Add To Collection</button>
+        <br/><br/><br/>
+    </form>
+
+            {% endfor %}
+
+         {% endif %}
+
+
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'ScienceBooks/books_base.html' %}
+{% load static %}
+{% block templatecontent %}
+
+<form method="POST">
+            {% csrf_token %}
+            <br/><br/>
+            <h4 style="">Do you really want to delete the book "{{ book.title }}"?</h4>
+            <br/>
+    <p style="text-align: center;"><button class="primary-bright-button" type="submit">Delete</button> <button class="primary-bright-button" type="button" onclick="location.href='../../'">Cancel</button></p>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'ScienceBooks/books_base.html' %}
+{% load static %}
+{% block templatecontent %}
+<section>
+    <div class="flex-container wrapper news">
+        {% for article in articles%} <!-- Iterates through the array of articles -->
+            <!-- Creates a new line for each item, sets the href to the full url, gives the article title and date -->
+        <ul>
+        <li><a href="{{article.url}}" target="_blank">{{article.title}}</a> <span>{{article.date}}</span></li>
+        </ul>
+
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

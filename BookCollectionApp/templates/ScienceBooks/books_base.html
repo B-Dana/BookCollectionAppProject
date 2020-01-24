@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %} <!-- must load static files on every template, even though it extends another template -->
+{% block appcontent %}
+    <section>
+        <div class="flex-container wrapper">
+            <h5>Science Books Collection Application</h5>
+            <hr />
+            <a class= 'tabNav' href="{% url 'science' %}">Home Page</a>
+            <a class= 'tabNav'  href="{% url 'listBooks' %}">Book Collection</a>
+            <a class= 'tabNav'  href="{% url 'booksApi' %}">Books API Service</a>
+            <a class= 'tabNav'  href="{% url 'GoogleNews' %}">Google Science News</a>
+        </div>
+    </section>
+    {% block templatecontent %}{% endblock %} <!-- section that all the template specific content will render within -->
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'ScienceBooks/books_base.html' %}
+{% load static %}
+{% block templatecontent %}
+<section>
+    <br/><br/>
+    <div class="flex-container footy">
+        <table>
+            <tr>
+                <th>Book Title</th>
+                <td>{{book.title}}</td>
+            </tr>
+            <tr>
+                <th>Authors</th>
+                <td>{{book.authors}}</td>
+            </tr>
+            <tr>
+                <th>Publication Date</th>
+                <td>{{book.publication_date}}</td>
+            </tr>
+            <tr>
+                <th>Google Reviews</th>
+                <td>{{book.google_reviews}}</td>
+            </tr>
+        </table>
+
+        <br/>
+        <button class="primary-bright-button" type="button" onclick=" location.href='{% url 'editBook' pk=book.pk %}'">Edit</button>
+        <br/>
+        <button class="primary-bright-button" type="button" onclick="location.href='{% url 'deleteBook' pk=book.pk %}'">Delete</button>
+        <br/>
+        <button class="primary-bright-button" type="button" onclick=" location.href='{% url 'listBooks' %}'">Back to Collection</button>
+
+    </div>
+</section>
+{% endblock %}

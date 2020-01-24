@@ -1,0 +1,16 @@
+{% extends 'ScienceBooks/books_base.html' %}
+{% load static %}
+{% block templatecontent %}
+<section>
+    <div class="home">
+        <img id="home" src="{% static 'images/bookshelf.jpg' %}">
+        <div class="text-block"><strong>Welcome to the Science Books Collection Application!</strong><br />
+        A collection manager app for a Science or a Science Fiction fan. There is a database to manage a
+        collection of science books, an API to search for information about books (title, authors, ISBN etc.),<br/>
+        and latest science news stories scraped from the Google website. <br/>
+        Take a look!
+        </div>
+        <br />
+    </div>
+</section>
+{% endblock %}

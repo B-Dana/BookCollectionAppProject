@@ -1,0 +1,317 @@
+/* Defining Root Colors */
+:root{
+    --midtone: #8D7148;
+    --neutral: #B49159;
+    --contrast: #403025;
+    --standout: #2F3C48;
+    --highlight: #f7c552;
+    --banner: #f89624;
+    --dark: #232323;
+    --footer: #675036;
+    --lightGray: #E8EFF6;
+}
+
+body{
+    background: linear-gradient(180deg, black, transparent 20%), linear-gradient(360deg, #000, transparent 20%), #090c1f url(/static/images/space.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    max-height: 100%;
+    margin: 0;
+    overflow: scroll;
+}
+
+.jumbotron{
+    background-color: transparent;
+    color:var(--neutral);
+}
+.main-content {
+    color:#fff!important;
+    letter-spacing:1px;
+    background: #0e0d0db8;
+    padding: 10px 40px;
+    border: solid 1px var(--lightGray);
+    border-radius: 20px;
+}
+
+/*----books_base page-----*/
+
+.wrapper h5{
+    text-align:center;
+    background:var(--contrast);
+    text-transform: uppercase;
+    font-size:20px;
+}
+
+.wrapper .tabNav, h5 {
+    color: #fff;
+    background:#0000009e;
+    font-style:none;
+    text-decoration:none;
+    padding:10px;
+    border-radius:20px;
+    text-transform: uppercase;
+    font-size:16px;
+ }
+
+/*----books_home page-----*/
+
+.home {
+    text-align: center;
+    position: relative;
+    width: 100%
+    border-radius: 10px;
+    height:100%;
+    vertical-align:middle;
+    overflow: hidden;
+}
+
+#home {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.text-block {
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 250px;
+    left: 0px;
+    background-color: brown;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+}
+
+/*-----books_index page-----*/
+
+.books-table {
+    width:100%;
+}
+
+#indexPage table th
+ {
+    background:var(--standout);
+    border-radius: 10px;
+    text-align:center;
+    font-size: 18px;
+}
+
+#indexPage table td
+ {
+     background:var(--dark);
+     text-align:center;
+     font-size: 18px;
+}
+
+/*-----books_api page-----*/
+
+.flex-container .book-search {
+    padding: 5px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+#list {
+    text-align: center;
+	list-style: none;
+	margin: 0px;
+}
+
+/*-----books_create page-----*/
+
+
+/* Beginning of the stock CSS template */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', arial, sans-serif;
+}
+
+
+
+p {
+	color: var(--midtone);
+	font-size: 13px;
+	line-height: 24px;
+}
+
+.primary-light-button {
+	background-color: var(--contrast);
+	color: var(--lightGray);
+	display: inline-block;
+	font-size: 12px;
+	padding:5px 12px 5px 12px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	border-radius: 20px;
+	border: none;
+	margin:1px;
+}
+
+.primary-bright-button {
+	background-color: var(--standout);
+	color: var(--neutral);
+	display: inline-block;
+	font-size: 14px;
+	padding:5px 12px 5px 12px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	border-radius: 20px;
+	border: none;
+	margin-top:3px;
+	text-transform: uppercase;
+}
+
+.first {
+    float: left;
+}
+
+
+#link {
+    text-decoration: none;
+	color: var(--neutral);
+}
+
+
+.primary-bright-button:hover , .primary-light-button:hover{
+    box-shadow: 0px 0px 4px 2px var(--highlight);
+}
+
+.primary-light-button:hover{
+    box-shadow: 0px 0px 4px 2px #fff;
+}
+
+
+.wrapper {
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top:20px;
+  padding: 10px;
+  background:#0000009e;
+}
+
+.news {
+    text-align: left;
+    padding-top: 30px;
+    padding-left: 80px;
+    border-radius: 15px;
+}
+
+.news a{
+ color: white;
+ font-size: 20px;
+ text-decoration:none;
+}
+
+
+.news span {
+    font-size: 14px;
+    color: yellow;
+}
+
+
+/* End of the stock CSS template */
+
+/* ===========================================
+    Specific styling Footy Demo App //  START
+=============================================*/
+
+.footy button{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.footy table{
+    width: 75%;
+    align: center;
+    margin: 20px auto;
+    border: 40px 20px 10px 20px;
+}
+
+.footy hr{
+    color: var(--banner);
+    border-top-width: 2px;
+    margin: 2px;
+}
+
+.footy h4{
+    color: var(--midtone);
+    text-align: center;
+    text-shadow: 2px 2px var(--standout);
+}
+
+.footy select, label{
+    color: var(--midtone);
+    background: var(--standout);
+    display: flex;
+}
+
+
+.footy_top {
+ background:transparent!important;
+    display:inline-block;
+    padding:2px 3px;
+    position:relative;
+    top: -230px;
+    width:100%;
+    color: var(--neutral);
+    text-shadow: 2px 2px 5px var(--dark);
+}
+
+.footy_center{
+    display:inline-block;
+    padding:2px 3px;
+    color: var(--lightGray);
+    width: 100%;
+    margin-top:0;
+}
+.footy_caption{
+    background:var(--contrast);
+    color:var(--lightGray)
+    text-decoration:none;
+    padding:4px 6px;
+    font-family: Helvetica, Ubuntu, Roboto, Noto, Arial, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    line-height:1.2;
+    display:inline-block;
+    border-radius:3px;
+    position: absolute;
+    right: 25%;
+}
+
+#indexPage {
+background:#0000009e;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+/*.footy tr,th,td{
+    color: var(--midtone);
+    background-color: var(--highlight);
+}*/
+
+
+/* =====  Specific styling Footy Demo App // END =====*/
+
+
+/* ============= RESPONSIVE max-width: 991p =========== */
+
+@media (max-width: 991px){
+
+}
+
+/* ============= RESPONSIVE max-width: 768px =========== */
+@media (max-width: 768px){
+
+}
+
+/* ============= RESPONSIVE max-width: 385px=========== */
+@media (max-width: 385px){
+
+
+}

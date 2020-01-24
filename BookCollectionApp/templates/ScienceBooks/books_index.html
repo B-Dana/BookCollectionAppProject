@@ -1,0 +1,29 @@
+{% extends 'ScienceBooks/books_base.html' %}
+{% load static %}
+{% block templatecontent %}
+<section >
+    <div class="flex-container" id="indexPage">
+        <table class="books-table">
+            <tr>
+                <th style="width:40%" class="col-md">Book Title</th>
+                <th style="width:25%" class="col-md">Authors</th>
+                <th style="width:10%" class="col-md">Publication Date</th>
+                <th style="width:5%" class="col-md">Google Reviews</th>
+                <th style="width:10%" class="col-md">Info</th>
+            </tr>
+            {% for book in books %}     <!-- creates a new row for each book in the collection -->
+                <tr>
+                    <td style="width:40%" class="col-md">{{book.title}}</td>
+                    <td style="width:25%" class="col-md">{{book.authors}}</td>
+                    <td style="width:10%" class="col-md">{{book.publication_date}}</td>
+                    <td style="width:5%" class="col-md">{{book.google_reviews}}</td>
+                    <td style="width:10%" class="col-md"><a href="{{book.pk}}/Details"><button class="primary-light-button">Details</button></a></td>    <!-- creates a link for that specific jersey -->
+                </tr>
+            {% endfor %}
+        </table>
+        <br/><br/>
+        <button class="primary-bright-button first" type="button" onclick=" location.href='{% url 'createBook' %}'">Add to Collection</button>
+        <br/><br/>
+    </div>
+</section>
+{% endblock %}
