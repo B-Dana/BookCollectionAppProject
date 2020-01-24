@@ -12,11 +12,11 @@ from bs4 import BeautifulSoup as BS #necessary for datascraping
 
 #View function that renders the home page
 def home(request):
-    return render(request, "ScienceBooks/books_home.html")
+    return render(request, "ScienceBooks/index.html")
 
 
 #View function that controls the main index page - list of books
-def index(request):
+def list(request):
     get_books = Book.Books.all()        #Gets all the current books from the database
     context = {'books': get_books}      #Creates a dictionary object of all the books for the template
     return render(request, 'ScienceBooks/books_index.html', context)

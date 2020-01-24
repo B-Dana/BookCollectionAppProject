@@ -6,7 +6,7 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='science'),                            # home page
-    path('Collection/', views.index, name='listBooks'),              # index of books
+    path('Collection/', views.list, name='listBooks'),              # index of books
     path('AddToCollection/', views.add_book, name='createBook'),     # add new book
     path('Collection/<int:pk>/Details/', views.details_book, name='bookDetails'),    # get details for a single book
     path('Collection/<int:pk>/Edit/', views.edit_book, name='editBook'),             # edit page for a single book
